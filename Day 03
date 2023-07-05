@@ -1,0 +1,16 @@
+let obj1 = { name: "person1", age: 5 };
+let obj2 = { age: 5, name: "person1" };
+
+// Step 1: Convert objects to strings
+let jsonString1 = JSON.stringify(obj1);
+let jsonString2 = JSON.stringify(obj2);
+
+// Step 2: Sort the strings
+let sortedString1 = jsonString1.split('').sort().join('');
+let sortedString2 = jsonString2.split('').sort().join('');
+
+// Step 3: Compare the sorted strings
+let isSame = sortedString1 === sortedString2;
+
+console.log(isSame);
+
