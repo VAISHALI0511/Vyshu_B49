@@ -1,0 +1,26 @@
+Write a blog on Difference between HTTP1.1 vs HTTP2.
+
+    HTTP1.1 - HTTP are made for computers to understand each other between clients and servers.
+              This version made datas to transfer faster by allowing the computer to reuse the information and reduces web traffic.
+                   eg:Google history
+              This allows the client to send multiple requests along the same connection without waiting for a response to each
+              It works on tetual format.
+              It compresses data by itself.
+
+     HTTP2 - HTTP2 is able to use a single TCP connection to send multiple streams of data at once so that, there is no resource blocks between any other resource.
+             Binary protocols consume less bandwidth, are more efficiently parsed and are less error-prone than the textual protocols used by HTTP1.1. 
+             It allows multiple requests/responses to be transmitted simultaneously over single connection.
+             It works on binary protocol and supports encrypted connection using HTTPS protocol.
+             It uses HPACK for data compression.
+
+
+Write a blog about objects and its internal representation in Javascript.
+
+             
+            Objects in JavaScript defined as an unordered collection of related data of primitive or reference types in the form of “key: value” pairs.
+            These keys can be variables or functions and are called properties and methods.
+            In JavaScript, objects have an internal property known as Prototype.
+            Objects, in JavaScript, are the most important data type and form the building blocks for modern JavaScript.
+            These objects are quite different from JavaScript’s primitive data types (Number, String, Boolean, null, undefined, and symbol) in the sense that these
+               primitive data types all store a single value each (depending on their types).
+            The property names can be strings or numbers. In case the property names are numbers, they must be accessed using the {} like this.
