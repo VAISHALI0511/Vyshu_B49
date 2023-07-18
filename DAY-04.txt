@@ -1,0 +1,28 @@
+//Convert all the strings to title caps in a string array
+
+function titleCase(str) {
+    str = str.toLowerCase().split(' ');
+    for (let i = 0; i < str.length; i++) {        
+  str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);    
+}    
+return str.join(' ');
+}
+console.log(titleCase("rememberring everything is really very difficult!!!"));
+
+//Sum of all numbers in an array
+
+let arr = [1, 2,3,4,5,6]
+let sum = 0;
+for (let i = 0; i < arr.length; i++) {    
+    sum += arr[i];
+}
+console.log("Sum is " + sum)
+
+//Remove duplicates from an array
+
+let names = ["vyshu", "mini", "gopi","hari", "vyshu", "mini"];
+function removeDuplicates(arr) {    
+return arr.filter((item,
+  index) => arr.indexOf(item) === index);
+}
+console.log(removeDuplicates(names));
