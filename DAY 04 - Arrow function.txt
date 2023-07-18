@@ -1,0 +1,86 @@
+//Print odd numbers in array
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+
+const OddNumbers = (arr) => {
+  
+arr.forEach((num) => {
+    
+if (num % 2 !== 0) {
+      
+console.log(num);
+    
+       }
+  
+   }); 
+
+};
+
+
+OddNumbers(numbers);
+
+
+ //Convert all the strings to title caps in a string array
+
+const arrowArray = [
+  ["its too hard to remeber without practices!!! so, please do practice regularly"]
+];
+function convertToTitleCase(str) {
+  return str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+}
+
+function convertArrowArrayToTitleCase(arrowArray) {
+  return arrowArray.map((subArray) =>
+    subArray.map((str) => convertToTitleCase(str))
+  );
+}
+
+const titleCasedArrowArray = convertArrowArrayToTitleCase(arrowArray);
+console.log(titleCasedArrowArray);
+
+          //Sum of all numbers in an array
+
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((a, b) => a + b, 0);
+console.log(sum);
+
+           
+           //Return all the prime numbers in an array
+
+const isPrime = num => {
+  if (num <= 1) return false;
+  if (num <= 3) return true;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+const findPrimesInArray = arr => arr.filter(num => isPrime(num));
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+const primeNumbers = findPrimesInArray(numbers);
+console.log(primeNumbers); 
+
+
+            //Return all the palindromes in an array
+
+const arrowFunctionsArray = [
+  () => "racecar",
+  () => "hello",
+  () => "level",
+  () => "world",
+  () => "madam",
+];
+const isPalindrome = (str) => {
+  const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const reversedStr = cleanedStr.split("").reverse().join("");
+  return cleanedStr === reversedStr;
+};
+const palindromesArray = arrowFunctionsArray.filter((arrowFunction) => {
+  const result = arrowFunction();
+  return isPalindrome(result);
+});
+console.log(palindromesArray.map((arrowFunction) => arrowFunction()));
+
+

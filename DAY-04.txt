@@ -1,4 +1,11 @@
-//Convert all the strings to title caps in a string array
+                       //Print Odd numbers in an array
+
+var numbers = [1,2,3,4,5,6,7,8,9];
+var odds = numbers.filter((num) => num % 2 === 1);
+console.log(odds);
+
+
+                          //Convert all the strings to title caps in a string array
 
 function titleCase(str) {
     str = str.toLowerCase().split(' ');
@@ -9,7 +16,8 @@ return str.join(' ');
 }
 console.log(titleCase("rememberring everything is really very difficult!!!"));
 
-//Sum of all numbers in an array
+
+                           //Sum of all numbers in an array
 
 let arr = [1, 2,3,4,5,6]
 let sum = 0;
@@ -18,7 +26,8 @@ for (let i = 0; i < arr.length; i++) {
 }
 console.log("Sum is " + sum)
 
-//Remove duplicates from an array
+
+                     //Remove duplicates from an array
 
 let names = ["vyshu", "mini", "gopi","hari", "vyshu", "mini"];
 function removeDuplicates(arr) {    
@@ -26,3 +35,17 @@ return arr.filter((item,
   index) => arr.indexOf(item) === index);
 }
 console.log(removeDuplicates(names));
+
+
+                    //Return all the palindromes in an array
+
+function isPalindrome(str) {
+  const reversedStr = str.split('').reverse().join('');
+  return str === reversedStr;
+}
+function findPalindromesInArray(arr) {
+  return arr.filter(item => isPalindrome(item));
+}
+const inputArray = ["level", "hello", "dad", "world", "malayalam"];
+const palindromes = findPalindromesInArray(inputArray);
+console.log(palindromes); // Output: [ 'level', 'deified', 'racecar' ]
